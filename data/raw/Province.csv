@@ -1,0 +1,5 @@
+ProvinceID,ProvinceName,BranchID,BranchName
+PROV001,Mpumalanga,BR001,Hazyview
+PROV002,Western Cape,BR002,Cape Town
+PROV003,Eastern Cape,BR003,Gqeberha
+PROV004,Gauteng,BR004,Johannesburg

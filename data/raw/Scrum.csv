@@ -1,0 +1,31 @@
+ScrumID,TeamID,SessionDate,Duration,MentorName,TopicsDiscussed,Notes
+SCR001,TM001,2025-01-22,25,Sarah Mitchell,Sprint Planning and User Stories,Team showed great collaboration in defining sprint goals
+SCR002,TM001,2025-02-05,20,Sarah Mitchell,Code Review and Testing,Discussed best practices for unit testing
+SCR003,TM001,2025-02-19,30,Sarah Mitchell,Deployment Strategies,Covered CI/CD pipeline implementation
+SCR004,TM002,2025-01-24,15,David Chen,Agile Methodology Basics,Introduction to scrum framework
+SCR005,TM002,2025-02-07,22,David Chen,Daily Standups and Retrospectives,Improved team communication processes
+SCR006,TM002,2025-02-21,18,David Chen,Product Backlog Management,Prioritization techniques discussion
+SCR007,TM003,2025-01-26,28,Nomsa Radebe,Machine Learning Fundamentals,Overview of supervised learning algorithms
+SCR008,TM003,2025-02-09,24,Nomsa Radebe,Data Preprocessing,Data cleaning and feature engineering
+SCR009,TM003,2025-02-23,26,Nomsa Radebe,Model Evaluation Metrics,Precision, recall, and F1-score analysis
+SCR010,TM004,2025-01-28,19,Michael Johnson,Database Design Principles,Normalization and ERD creation
+SCR011,TM004,2025-02-11,23,Michael Johnson,API Development,RESTful API best practices
+SCR012,TM004,2025-02-25,21,Michael Johnson,Security Considerations,Authentication and authorization methods
+SCR013,TM005,2025-02-03,27,Linda Thompson,Infrastructure as Code,Introduction to Terraform and Ansible
+SCR014,TM005,2025-02-17,25,Linda Thompson,Container Orchestration,Kubernetes basics and deployment
+SCR015,TM005,2025-03-03,22,Linda Thompson,Monitoring and Logging,Setting up observability tools
+SCR016,TM006,2025-02-05,20,James Wilson,Version Control Systems,Git workflow and branching strategies
+SCR017,TM006,2025-02-19,24,James Wilson,Build Automation,Jenkins pipeline configuration
+SCR018,TM006,2025-03-05,26,James Wilson,Quality Assurance,Automated testing frameworks
+SCR019,TM007,2025-02-07,18,Priya Patel,Cloud Architecture Patterns,Microservices design principles
+SCR020,TM007,2025-02-21,29,Priya Patel,Scalability Solutions,Load balancing and caching strategies
+SCR021,TM007,2025-03-07,23,Priya Patel,Cost Optimization,Cloud resource management
+SCR022,TM008,2025-02-09,21,Robert Davis,Performance Tuning,Database optimization techniques
+SCR023,TM008,2025-02-23,19,Robert Davis,Error Handling,Exception management best practices
+SCR024,TM008,2025-03-09,25,Robert Davis,Code Documentation,Writing maintainable code
+SCR025,TM009,2025-02-17,24,Amanda Foster,Web Development Frameworks,React and Angular comparison
+SCR026,TM009,2025-03-03,28,Amanda Foster,Responsive Design,Mobile-first development approach
+SCR027,TM009,2025-03-17,22,Amanda Foster,State Management,Redux implementation patterns
+SCR028,TM010,2025-02-19,26,Kevin Brown,Data Structures,Arrays, lists, and hash tables
+SCR029,TM010,2025-03-05,20,Kevin Brown,Algorithm Complexity,Big O notation analysis
+SCR030,TM010,2025-03-19,24,Kevin Brown,Dynamic Programming,Problem-solving techniques

@@ -1,0 +1,19 @@
+{
+  "total_candidates": 138,
+  "gender_distribution": {
+    "Female": 70,
+    "Male": 68
+  },
+  "age_distribution": {
+    "26-30": 71,
+    "18-25": 60,
+    "31-35": 7,
+    "36+": 0
+  },
+  "avg_age": 26.115942028985508,
+  "placement_rate": 100.0,
+  "total_placements": 40,
+  "successful_placements": 40,
+  "total_course_completions": 100,
+  "unique_courses": 100
+}

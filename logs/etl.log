@@ -1,0 +1,279 @@
+2025-09-22 13:31:23,735 - src.pipeline.etl_pipeline - INFO - Starting ETL pipeline execution
+2025-09-22 13:31:23,736 - src.pipeline.etl_pipeline - INFO - Extracting data from CSV files
+2025-09-22 13:31:23,750 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Candidate.csv with 138 rows
+2025-09-22 13:31:23,777 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Cohort.csv with 7 rows
+2025-09-22 13:31:23,784 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Coursera.csv with 100 rows
+2025-09-22 13:31:23,789 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Placement.csv with 50 rows
+2025-09-22 13:31:23,808 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Team.csv with 28 rows
+2025-09-22 13:31:23,815 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Province.csv with 4 rows
+2025-09-22 13:31:23,823 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Project.csv with 30 rows
+2025-09-22 13:31:23,824 - src.extract.data_validator - ERROR - Missing required columns in projects: ['ProjectName', 'StartDate', 'EndDate']
+2025-09-22 13:31:23,824 - src.extract.csv_extractor - WARNING - Validation failed for projects, using raw data with warnings
+2025-09-22 13:31:23,827 - src.extract.csv_extractor - ERROR - Error reading C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Scrum.csv: Error tokenizing data. C error: Expected 7 fields in line 10, saw 9
+
+2025-09-22 13:31:23,828 - src.pipeline.etl_pipeline - ERROR - ETL pipeline failed: Error tokenizing data. C error: Expected 7 fields in line 10, saw 9
+Traceback (most recent call last):
+  File "C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\src\pipeline\etl_pipeline.py", line 23, in run_etl_pipeline
+    raw_data = extract_data()
+  File "C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\src\extract\csv_extractor.py", line 48, in extract_data
+    df = read_csv_file(file_path, data_name)
+  File "C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\src\extract\csv_extractor.py", line 12, in read_csv_file
+    df = pd.read_csv(file_path)
+  File "C:\Users\Thabang Mkhwanazi\.virtualenvs\youth_employment_tracker-wZMo5gnf\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\Thabang Mkhwanazi\.virtualenvs\youth_employment_tracker-wZMo5gnf\Lib\site-packages\pandas\io\parsers\readers.py", line 626, in _read
+    return parser.read(nrows)
+           ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Thabang Mkhwanazi\.virtualenvs\youth_employment_tracker-wZMo5gnf\Lib\site-packages\pandas\io\parsers\readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        nrows
+        ^^^^^
+    )
+    ^
+  File "C:\Users\Thabang Mkhwanazi\.virtualenvs\youth_employment_tracker-wZMo5gnf\Lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "pandas/_libs/parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "pandas/_libs/parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "pandas/_libs/parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "pandas/_libs/parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 10, saw 9
+
+2025-09-22 13:36:10,668 - src.pipeline.etl_pipeline - INFO - Starting ETL pipeline execution
+2025-09-22 13:36:10,671 - src.pipeline.etl_pipeline - INFO - Extracting data from CSV files
+2025-09-22 13:36:10,702 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Candidate.csv with 138 rows
+2025-09-22 13:36:10,766 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Cohort.csv with 7 rows
+2025-09-22 13:36:10,776 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Coursera.csv with 100 rows
+2025-09-22 13:36:10,794 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Placement.csv with 50 rows
+2025-09-22 13:36:10,810 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Team.csv with 28 rows
+2025-09-22 13:36:10,819 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Province.csv with 4 rows
+2025-09-22 13:36:10,826 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Project.csv with 30 rows
+2025-09-22 13:36:10,834 - src.extract.csv_extractor - ERROR - Error reading C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Scrum.csv: Error tokenizing data. C error: Expected 7 fields in line 10, saw 9
+
+2025-09-22 13:36:10,836 - src.pipeline.etl_pipeline - ERROR - ETL pipeline failed: Error tokenizing data. C error: Expected 7 fields in line 10, saw 9
+Traceback (most recent call last):
+  File "C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\src\pipeline\etl_pipeline.py", line 23, in run_etl_pipeline
+    raw_data = extract_data()
+  File "C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\src\extract\csv_extractor.py", line 48, in extract_data
+    df = read_csv_file(file_path, data_name)
+  File "C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\src\extract\csv_extractor.py", line 12, in read_csv_file
+    df = pd.read_csv(file_path)
+  File "C:\Users\Thabang Mkhwanazi\.virtualenvs\youth_employment_tracker-wZMo5gnf\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\Thabang Mkhwanazi\.virtualenvs\youth_employment_tracker-wZMo5gnf\Lib\site-packages\pandas\io\parsers\readers.py", line 626, in _read
+    return parser.read(nrows)
+           ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Thabang Mkhwanazi\.virtualenvs\youth_employment_tracker-wZMo5gnf\Lib\site-packages\pandas\io\parsers\readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        nrows
+        ^^^^^
+    )
+    ^
+  File "C:\Users\Thabang Mkhwanazi\.virtualenvs\youth_employment_tracker-wZMo5gnf\Lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "pandas/_libs/parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "pandas/_libs/parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "pandas/_libs/parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "pandas/_libs/parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 10, saw 9
+
+2025-09-22 13:43:17,307 - src.pipeline.etl_pipeline - INFO - Starting ETL pipeline execution
+2025-09-22 13:43:17,308 - src.pipeline.etl_pipeline - INFO - Extracting data from CSV files
+2025-09-22 13:43:17,308 - src.extract.csv_extractor - WARNING - File not found: C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\candidates.csv
+2025-09-22 13:43:17,315 - src.extract.csv_extractor - WARNING - File not found: C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\cohorts.csv
+2025-09-22 13:43:17,327 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\coursera.csv with 100 rows
+2025-09-22 13:43:17,379 - src.extract.csv_extractor - WARNING - File not found: C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\placements.csv
+2025-09-22 13:43:17,380 - src.extract.csv_extractor - WARNING - File not found: C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\teams.csv
+2025-09-22 13:43:17,381 - src.extract.csv_extractor - WARNING - File not found: C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\provinces.csv
+2025-09-22 13:43:17,382 - src.extract.csv_extractor - WARNING - File not found: C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\projects.csv
+2025-09-22 13:43:17,382 - src.extract.csv_extractor - WARNING - File not found: C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\scrums.csv
+2025-09-22 13:43:17,382 - src.pipeline.etl_pipeline - INFO - Cleaning extracted data
+2025-09-22 13:43:17,383 - src.transform.data_cleaner - INFO - Cleaning candidates data...
+2025-09-22 13:43:17,383 - src.pipeline.etl_pipeline - ERROR - ETL pipeline failed: Cannot set a DataFrame without columns to the column Email
+Traceback (most recent call last):
+  File "C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\src\pipeline\etl_pipeline.py", line 31, in run_etl_pipeline
+    cleaned_data = clean_data(raw_data)
+  File "C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\src\transform\data_cleaner.py", line 170, in clean_data
+    cleaned_data[data_name] = cleaning_functions[data_name](df)
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^
+  File "C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\src\transform\data_cleaner.py", line 61, in clean_candidates_data
+    df['Email'] = df.apply(lambda row: generate_email_from_names(row['FirstName'], row['LastName']), axis=1)
+    ~~^^^^^^^^^
+  File "C:\Users\Thabang Mkhwanazi\.virtualenvs\youth_employment_tracker-wZMo5gnf\Lib\site-packages\pandas\core\frame.py", line 4306, in __setitem__
+    self._set_item_frame_value(key, value)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\Thabang Mkhwanazi\.virtualenvs\youth_employment_tracker-wZMo5gnf\Lib\site-packages\pandas\core\frame.py", line 4469, in _set_item_frame_value
+    raise ValueError(
+        f"Cannot set a DataFrame without columns to the column {key}"
+    )
+ValueError: Cannot set a DataFrame without columns to the column Email
+2025-09-22 13:44:18,181 - src.pipeline.etl_pipeline - INFO - Starting ETL pipeline execution
+2025-09-22 13:44:18,181 - src.pipeline.etl_pipeline - INFO - Extracting data from CSV files
+2025-09-22 13:44:18,186 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Candidate.csv with 138 rows
+2025-09-22 13:44:18,194 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Cohort.csv with 7 rows
+2025-09-22 13:44:18,200 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Coursera.csv with 100 rows
+2025-09-22 13:44:18,206 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Placement.csv with 50 rows
+2025-09-22 13:44:18,211 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Team.csv with 28 rows
+2025-09-22 13:44:18,218 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Province.csv with 4 rows
+2025-09-22 13:44:18,223 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Project.csv with 30 rows
+2025-09-22 13:44:18,231 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Scrum.csv with 28 rows
+2025-09-22 13:44:18,233 - src.pipeline.etl_pipeline - INFO - Cleaning extracted data
+2025-09-22 13:44:18,234 - src.transform.data_cleaner - INFO - Cleaning candidates data...
+2025-09-22 13:44:18,248 - src.transform.data_cleaner - INFO - Regenerated 138 emails with incorrect domain
+2025-09-22 13:44:18,260 - src.transform.data_cleaner - INFO - Cleaned 138 rows in candidates
+2025-09-22 13:44:18,260 - src.transform.data_cleaner - INFO - Cleaning cohorts data...
+2025-09-22 13:44:18,262 - src.transform.data_cleaner - INFO - Cleaned 7 rows in cohorts
+2025-09-22 13:44:18,263 - src.transform.data_cleaner - INFO - Cleaning coursera data...
+2025-09-22 13:44:18,265 - src.transform.data_cleaner - INFO - Cleaned 100 rows in coursera
+2025-09-22 13:44:18,265 - src.transform.data_cleaner - INFO - Cleaning placements data...
+2025-09-22 13:44:18,270 - src.transform.data_cleaner - INFO - Cleaned 40 rows in placements
+2025-09-22 13:44:18,270 - src.transform.data_cleaner - INFO - Cleaning teams data...
+2025-09-22 13:44:18,271 - src.transform.data_cleaner - INFO - Cleaned 28 rows in teams
+2025-09-22 13:44:18,271 - src.transform.data_cleaner - INFO - Cleaning provinces data...
+2025-09-22 13:44:18,271 - src.transform.data_cleaner - INFO - Cleaned 4 rows in provinces
+2025-09-22 13:44:18,271 - src.transform.data_cleaner - INFO - Cleaning projects data...
+2025-09-22 13:44:18,272 - src.transform.data_cleaner - INFO - Cleaned 30 rows in projects
+2025-09-22 13:44:18,272 - src.transform.data_cleaner - INFO - Cleaning scrums data...
+2025-09-22 13:44:18,273 - src.transform.data_cleaner - INFO - Cleaned 28 rows in scrums
+2025-09-22 13:44:18,273 - src.transform.data_cleaner - INFO - Data cleaning completed
+2025-09-22 13:44:18,274 - src.pipeline.etl_pipeline - INFO - Transforming data into business insights
+2025-09-22 13:44:18,294 - src.pipeline.etl_pipeline - ERROR - ETL pipeline failed: "Column(s) ['AttendanceCount'] do not exist"
+Traceback (most recent call last):
+  File "C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\src\pipeline\etl_pipeline.py", line 34, in run_etl_pipeline
+    transformed_data = transform_data(cleaned_data)
+  File "C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\src\transform\data_transformer.py", line 60, in transform_data
+    team_performance = teams.merge(scrums.groupby('TeamID').agg({
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+        'AttendanceCount': 'mean',
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        'ScrumID': 'count'
+        ^^^^^^^^^^^^^^^^^^
+    }).rename(columns={'ScrumID': 'TotalScrums'}), on='TeamID', how='left')
+    ^^
+  File "C:\Users\Thabang Mkhwanazi\.virtualenvs\youth_employment_tracker-wZMo5gnf\Lib\site-packages\pandas\core\groupby\generic.py", line 1432, in aggregate
+    result = op.agg()
+  File "C:\Users\Thabang Mkhwanazi\.virtualenvs\youth_employment_tracker-wZMo5gnf\Lib\site-packages\pandas\core\apply.py", line 190, in agg
+    return self.agg_dict_like()
+           ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Thabang Mkhwanazi\.virtualenvs\youth_employment_tracker-wZMo5gnf\Lib\site-packages\pandas\core\apply.py", line 423, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Thabang Mkhwanazi\.virtualenvs\youth_employment_tracker-wZMo5gnf\Lib\site-packages\pandas\core\apply.py", line 1603, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+                                ~~~~~~~~~~~~~~~~~~~~~~^
+        op_name, selected_obj, selection, kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Thabang Mkhwanazi\.virtualenvs\youth_employment_tracker-wZMo5gnf\Lib\site-packages\pandas\core\apply.py", line 462, in compute_dict_like
+    func = self.normalize_dictlike_arg(op_name, selected_obj, func)
+  File "C:\Users\Thabang Mkhwanazi\.virtualenvs\youth_employment_tracker-wZMo5gnf\Lib\site-packages\pandas\core\apply.py", line 663, in normalize_dictlike_arg
+    raise KeyError(f"Column(s) {list(cols)} do not exist")
+KeyError: "Column(s) ['AttendanceCount'] do not exist"
+2025-09-22 13:48:29,475 - src.pipeline.etl_pipeline - INFO - Starting ETL pipeline execution
+2025-09-22 13:48:29,476 - src.pipeline.etl_pipeline - INFO - Extracting data from CSV files
+2025-09-22 13:48:29,496 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Candidate.csv with 138 rows
+2025-09-22 13:48:29,525 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Cohort.csv with 7 rows
+2025-09-22 13:48:29,533 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Coursera.csv with 100 rows
+2025-09-22 13:48:29,540 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Placement.csv with 50 rows
+2025-09-22 13:48:29,547 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Team.csv with 28 rows
+2025-09-22 13:48:29,556 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Province.csv with 4 rows
+2025-09-22 13:48:29,564 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Project.csv with 30 rows
+2025-09-22 13:48:29,573 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Scrum.csv with 28 rows
+2025-09-22 13:48:29,578 - src.pipeline.etl_pipeline - INFO - Cleaning extracted data
+2025-09-22 13:48:29,578 - src.transform.data_cleaner - INFO - Cleaning candidates data...
+2025-09-22 13:48:29,598 - src.transform.data_cleaner - INFO - Regenerated 138 emails with incorrect domain
+2025-09-22 13:48:29,613 - src.transform.data_cleaner - INFO - Cleaned 138 rows in candidates
+2025-09-22 13:48:29,613 - src.transform.data_cleaner - INFO - Cleaning cohorts data...
+2025-09-22 13:48:29,616 - src.transform.data_cleaner - INFO - Cleaned 7 rows in cohorts
+2025-09-22 13:48:29,616 - src.transform.data_cleaner - INFO - Cleaning coursera data...
+2025-09-22 13:48:29,619 - src.transform.data_cleaner - INFO - Cleaned 100 rows in coursera
+2025-09-22 13:48:29,619 - src.transform.data_cleaner - INFO - Cleaning placements data...
+2025-09-22 13:48:29,624 - src.transform.data_cleaner - INFO - Cleaned 40 rows in placements
+2025-09-22 13:48:29,625 - src.transform.data_cleaner - INFO - Cleaning teams data...
+2025-09-22 13:48:29,626 - src.transform.data_cleaner - INFO - Cleaned 28 rows in teams
+2025-09-22 13:48:29,626 - src.transform.data_cleaner - INFO - Cleaning provinces data...
+2025-09-22 13:48:29,627 - src.transform.data_cleaner - INFO - Cleaned 4 rows in provinces
+2025-09-22 13:48:29,628 - src.transform.data_cleaner - INFO - Cleaning projects data...
+2025-09-22 13:48:29,629 - src.transform.data_cleaner - INFO - Cleaned 30 rows in projects
+2025-09-22 13:48:29,629 - src.transform.data_cleaner - INFO - Cleaning scrums data...
+2025-09-22 13:48:29,633 - src.transform.data_cleaner - INFO - Cleaned 28 rows in scrums
+2025-09-22 13:48:29,634 - src.transform.data_cleaner - INFO - Data cleaning completed
+2025-09-22 13:48:29,634 - src.pipeline.etl_pipeline - INFO - Transforming data into business insights
+2025-09-22 13:48:29,694 - src.transform.data_transformer - INFO - Data transformation completed. Created 4 transformed datasets
+2025-09-22 13:48:29,694 - src.pipeline.etl_pipeline - INFO - Creating summary reports
+2025-09-22 13:48:29,751 - src.transform.report_generator - INFO - Created 4 summary reports
+2025-09-22 13:48:29,753 - src.pipeline.etl_pipeline - INFO - Saving output files
+2025-09-22 13:48:29,779 - src.load.csv_loader - INFO - Saved enhanced_candidates to C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\outputs\enhanced_candidates.csv
+2025-09-22 13:48:29,784 - src.load.csv_loader - INFO - Saved placement_analysis to C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\outputs\placement_analysis.csv
+2025-09-22 13:48:29,789 - src.load.csv_loader - INFO - Saved coursera_analysis to C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\outputs\coursera_analysis.csv
+2025-09-22 13:48:29,796 - src.load.csv_loader - INFO - Saved team_performance to C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\outputs\team_performance.csv
+2025-09-22 13:48:29,798 - src.load.csv_loader - INFO - Saved program_summary to C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\outputs\program_summary.json
+2025-09-22 13:48:29,802 - src.load.csv_loader - INFO - Saved placement_analytics_by_gender to C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\outputs\placement_analytics_by_gender.csv
+2025-09-22 13:48:29,808 - src.load.csv_loader - INFO - Saved placement_analytics_by_age_group to C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\outputs\placement_analytics_by_age_group.csv
+2025-09-22 13:48:29,814 - src.load.csv_loader - INFO - Saved placement_analytics_by_province to C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\outputs\placement_analytics_by_province.csv
+2025-09-22 13:48:29,816 - src.load.csv_loader - INFO - Saved course_analytics_completion_by_gender to C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\outputs\course_analytics_completion_by_gender.json
+2025-09-22 13:48:29,821 - src.load.csv_loader - INFO - Saved course_analytics_completion_by_course to C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\outputs\course_analytics_completion_by_course.csv
+2025-09-22 13:48:29,821 - src.load.csv_loader - INFO - All outputs saved to C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\outputs
+2025-09-22 13:48:29,822 - src.pipeline.etl_pipeline - INFO - ETL pipeline completed successfully in 0:00:00.345746
+2025-09-22 13:57:30,551 - src.pipeline.etl_pipeline - INFO - Starting ETL pipeline execution
+2025-09-22 13:57:30,551 - src.pipeline.etl_pipeline - INFO - Extracting data from CSV files
+2025-09-22 13:57:30,567 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Candidate.csv with 138 rows
+2025-09-22 13:57:30,581 - src.extract.csv_extractor - INFO - Successfully extracted candidates with 138 rows
+2025-09-22 13:57:30,583 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Cohort.csv with 7 rows
+2025-09-22 13:57:30,584 - src.extract.csv_extractor - INFO - Successfully extracted cohorts with 7 rows
+2025-09-22 13:57:30,586 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Coursera.csv with 100 rows
+2025-09-22 13:57:30,588 - src.extract.csv_extractor - INFO - Successfully extracted coursera with 100 rows
+2025-09-22 13:57:30,591 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Placement.csv with 50 rows
+2025-09-22 13:57:30,593 - src.extract.csv_extractor - INFO - Successfully extracted placements with 50 rows
+2025-09-22 13:57:30,595 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Team.csv with 28 rows
+2025-09-22 13:57:30,596 - src.extract.csv_extractor - INFO - Successfully extracted teams with 28 rows
+2025-09-22 13:57:30,598 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Province.csv with 4 rows
+2025-09-22 13:57:30,600 - src.extract.csv_extractor - INFO - Successfully extracted provinces with 4 rows
+2025-09-22 13:57:30,603 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Project.csv with 30 rows
+2025-09-22 13:57:30,605 - src.extract.csv_extractor - INFO - Successfully extracted projects with 30 rows
+2025-09-22 13:57:30,608 - src.extract.csv_extractor - INFO - Successfully read C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\raw\Scrum.csv with 28 rows
+2025-09-22 13:57:30,609 - src.extract.csv_extractor - INFO - Successfully extracted scrums with 28 rows
+2025-09-22 13:57:30,610 - src.pipeline.etl_pipeline - INFO - Cleaning extracted data
+2025-09-22 13:57:30,610 - src.transform.data_cleaner - INFO - Cleaning candidates data...
+2025-09-22 13:57:30,626 - src.transform.data_cleaner - INFO - Regenerated 138 emails with incorrect domain
+2025-09-22 13:57:30,639 - src.transform.data_cleaner - INFO - Cleaned 138 rows in candidates
+2025-09-22 13:57:30,639 - src.transform.data_cleaner - INFO - Cleaning cohorts data...
+2025-09-22 13:57:30,642 - src.transform.data_cleaner - INFO - Cleaned 7 rows in cohorts
+2025-09-22 13:57:30,643 - src.transform.data_cleaner - INFO - Cleaning coursera data...
+2025-09-22 13:57:30,645 - src.transform.data_cleaner - INFO - Cleaned 100 rows in coursera
+2025-09-22 13:57:30,645 - src.transform.data_cleaner - INFO - Cleaning placements data...
+2025-09-22 13:57:30,648 - src.transform.data_cleaner - INFO - Cleaned 40 rows in placements
+2025-09-22 13:57:30,649 - src.transform.data_cleaner - INFO - Cleaning teams data...
+2025-09-22 13:57:30,649 - src.transform.data_cleaner - INFO - Cleaned 28 rows in teams
+2025-09-22 13:57:30,649 - src.transform.data_cleaner - INFO - Cleaning provinces data...
+2025-09-22 13:57:30,650 - src.transform.data_cleaner - INFO - Cleaned 4 rows in provinces
+2025-09-22 13:57:30,650 - src.transform.data_cleaner - INFO - Cleaning projects data...
+2025-09-22 13:57:30,651 - src.transform.data_cleaner - INFO - Cleaned 30 rows in projects
+2025-09-22 13:57:30,651 - src.transform.data_cleaner - INFO - Cleaning scrums data...
+2025-09-22 13:57:30,652 - src.transform.data_cleaner - INFO - Cleaned 28 rows in scrums
+2025-09-22 13:57:30,652 - src.transform.data_cleaner - INFO - Data cleaning completed
+2025-09-22 13:57:30,653 - src.pipeline.etl_pipeline - INFO - Transforming data into business insights
+2025-09-22 13:57:30,666 - src.transform.data_transformer - INFO - Enhanced candidates data created
+2025-09-22 13:57:30,671 - src.transform.data_transformer - INFO - Placement analysis data created
+2025-09-22 13:57:30,674 - src.transform.data_transformer - INFO - Coursera analysis data created
+2025-09-22 13:57:30,683 - src.transform.data_transformer - INFO - Team performance data created
+2025-09-22 13:57:30,683 - src.transform.data_transformer - INFO - Data transformation completed. Created 4 transformed datasets
+2025-09-22 13:57:30,684 - src.pipeline.etl_pipeline - INFO - Creating summary reports
+2025-09-22 13:57:30,710 - src.transform.report_generator - INFO - Created 4 summary reports
+2025-09-22 13:57:30,710 - src.pipeline.etl_pipeline - INFO - Saving output files
+2025-09-22 13:57:30,718 - src.load.csv_loader - INFO - Saved enhanced_candidates to C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\outputs\enhanced_candidates.csv
+2025-09-22 13:57:30,721 - src.load.csv_loader - INFO - Saved placement_analysis to C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\outputs\placement_analysis.csv
+2025-09-22 13:57:30,724 - src.load.csv_loader - INFO - Saved coursera_analysis to C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\outputs\coursera_analysis.csv
+2025-09-22 13:57:30,726 - src.load.csv_loader - INFO - Saved team_performance to C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\outputs\team_performance.csv
+2025-09-22 13:57:30,727 - src.load.csv_loader - INFO - Saved program_summary to C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\outputs\program_summary.json
+2025-09-22 13:57:30,729 - src.load.csv_loader - INFO - Saved placement_analytics_by_gender to C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\outputs\placement_analytics_by_gender.csv
+2025-09-22 13:57:30,731 - src.load.csv_loader - INFO - Saved placement_analytics_by_age_group to C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\outputs\placement_analytics_by_age_group.csv
+2025-09-22 13:57:30,733 - src.load.csv_loader - INFO - Saved placement_analytics_by_province to C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\outputs\placement_analytics_by_province.csv
+2025-09-22 13:57:30,735 - src.load.csv_loader - INFO - Saved course_analytics_completion_by_gender to C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\outputs\course_analytics_completion_by_gender.json
+2025-09-22 13:57:30,737 - src.load.csv_loader - INFO - Saved course_analytics_completion_by_course to C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\outputs\course_analytics_completion_by_course.csv
+2025-09-22 13:57:30,738 - src.load.csv_loader - INFO - All outputs saved to C:\Users\Thabang Mkhwanazi\projects\youth_employment_tracker\scripts\..\data\outputs
+2025-09-22 13:57:30,738 - src.pipeline.etl_pipeline - INFO - ETL pipeline completed successfully in 0:00:00.186806

@@ -1,0 +1,101 @@
+ProgressID,CandidateID,CourseName,CompletionPercentage,DateCompleted,Status
+PROG001,CAN001,Machine Learning Fundamentals,100,2025-02-15,Completed
+PROG002,CAN001,Python for Data Science,85,NULL,In Progress
+PROG003,CAN002,Introduction to Artificial Intelligence,100,2025-02-20,Completed
+PROG004,CAN002,Deep Learning Specialization,65,NULL,In Progress
+PROG005,CAN002,Ethics in AI,100,2025-03-01,Completed
+PROG006,CAN003,Computer Vision Basics,90,NULL,In Progress
+PROG007,CAN003,Neural Networks and Deep Learning,100,2025-02-28,Completed
+PROG008,CAN004,Natural Language Processing,75,NULL,In Progress
+PROG009,CAN004,TensorFlow Developer Certificate,100,2025-03-10,Completed
+PROG010,CAN005,Data Structures and Algorithms,45,NULL,In Progress
+PROG011,CAN005,Advanced Python Programming,100,2025-02-25,Completed
+PROG012,CAN006,Web Development with React,100,2025-03-05,Completed
+PROG013,CAN006,JavaScript ES6+ Features,80,NULL,In Progress
+PROG014,CAN007,Node.js Backend Development,95,NULL,In Progress
+PROG015,CAN007,Database Design and SQL,100,2025-02-22,Completed
+PROG016,CAN008,UI/UX Design Principles,100,2025-03-12,Completed
+PROG017,CAN008,Responsive Web Design,70,NULL,In Progress
+PROG018,CAN009,API Development with Express,85,NULL,In Progress
+PROG019,CAN009,Authentication and Authorization,100,2025-03-08,Completed
+PROG020,CAN010,Linux System Administration,100,2025-03-15,Completed
+PROG021,CAN010,Bash Scripting,60,NULL,In Progress
+PROG022,CAN011,Network Security Fundamentals,100,2025-02-18,Completed
+PROG023,CAN011,Penetration Testing,40,NULL,In Progress
+PROG024,CAN012,Digital Forensics,90,NULL,In Progress
+PROG025,CAN012,Cybersecurity Essentials,100,2025-03-20,Completed
+PROG026,CAN013,Cloud Security Architecture,75,NULL,In Progress
+PROG027,CAN013,AWS Security Specialty,100,2025-03-25,Completed
+PROG028,CAN014,Information Security Management,85,NULL,In Progress
+PROG029,CAN014,Risk Assessment and Management,100,2025-02-14,Completed
+PROG030,CAN015,Ethical Hacking,55,NULL,In Progress
+PROG031,CAN015,Incident Response,100,2025-03-18,Completed
+PROG032,CAN016,Docker Fundamentals,100,2025-03-22,Completed
+PROG033,CAN016,Kubernetes Administration,70,NULL,In Progress
+PROG034,CAN017,Infrastructure as Code,95,NULL,In Progress
+PROG035,CAN017,Terraform on AWS,100,2025-02-12,Completed
+PROG036,CAN018,CI/CD Pipeline Development,80,NULL,In Progress
+PROG037,CAN018,Jenkins Administration,100,2025-03-14,Completed
+PROG038,CAN019,Monitoring and Observability,65,NULL,In Progress
+PROG039,CAN019,Prometheus and Grafana,100,2025-03-26,Completed
+PROG040,CAN020,Site Reliability Engineering,90,NULL,In Progress
+PROG041,CAN020,DevOps Culture and Practices,100,2025-02-16,Completed
+PROG042,CAN021,Ansible Automation,100,2025-04-02,Completed
+PROG043,CAN021,Configuration Management,75,NULL,In Progress
+PROG044,CAN022,AWS Solutions Architect,85,NULL,In Progress
+PROG045,CAN022,Cloud Migration Strategies,100,2025-03-28,Completed
+PROG046,CAN023,Azure Fundamentals,100,2025-04-05,Completed
+PROG047,CAN023,Azure DevOps,60,NULL,In Progress
+PROG048,CAN024,Google Cloud Platform,70,NULL,In Progress
+PROG049,CAN024,Multi-Cloud Management,100,2025-03-30,Completed
+PROG050,CAN025,Serverless Computing,100,2025-04-08,Completed
+PROG051,CAN025,Microservices Architecture,80,NULL,In Progress
+PROG052,CAN026,Container Security,90,NULL,In Progress
+PROG053,CAN026,DevSecOps Practices,100,2025-04-01,Completed
+PROG054,CAN027,API Gateway Management,75,NULL,In Progress
+PROG055,CAN027,Service Mesh Implementation,100,2025-04-10,Completed
+PROG056,CAN028,Performance Testing,85,NULL,In Progress
+PROG057,CAN028,Load Testing with JMeter,100,2025-03-24,Completed
+PROG058,CAN029,Agile Project Management,100,2025-04-12,Completed
+PROG059,CAN029,Scrum Master Certification,65,NULL,In Progress
+PROG060,CAN030,Business Analysis,90,NULL,In Progress
+PROG061,CAN030,Requirements Engineering,100,2025-04-06,Completed
+PROG062,CAN031,Data Analytics with Python,100,2025-04-15,Completed
+PROG063,CAN031,Statistical Analysis,70,NULL,In Progress
+PROG064,CAN032,Data Visualization with Tableau,85,NULL,In Progress
+PROG065,CAN032,Business Intelligence,100,2025-04-18,Completed
+PROG066,CAN033,SQL for Data Analysis,100,2025-04-20,Completed
+PROG067,CAN033,Big Data Analytics,55,NULL,In Progress
+PROG068,CAN034,R Programming for Statistics,80,NULL,In Progress
+PROG069,CAN034,Predictive Modeling,100,2025-04-22,Completed
+PROG070,CAN035,Excel Advanced Functions,100,2025-04-14,Completed
+PROG071,CAN035,Power BI Fundamentals,75,NULL,In Progress
+PROG072,CAN036,Quality Assurance Testing,100,2025-04-25,Completed
+PROG073,CAN036,Automated Testing with Selenium,60,NULL,In Progress
+PROG074,CAN037,Mobile Testing Strategies,85,NULL,In Progress
+PROG075,CAN037,Performance Testing Tools,100,2025-04-28,Completed
+PROG076,CAN038,Test Case Design,90,NULL,In Progress
+PROG077,CAN038,Bug Tracking and Management,100,2025-04-16,Completed
+PROG078,CAN039,User Acceptance Testing,75,NULL,In Progress
+PROG079,CAN039,Test Automation Framework,100,2025-04-30,Completed
+PROG080,CAN040,Android App Development,100,2025-05-02,Completed
+PROG081,CAN040,Kotlin Programming,80,NULL,In Progress
+PROG082,CAN041,iOS Development with Swift,70,NULL,In Progress
+PROG083,CAN041,Mobile UI/UX Design,100,2025-05-05,Completed
+PROG084,CAN042,React Native Development,85,NULL,In Progress
+PROG085,CAN042,Cross-Platform Mobile Apps,100,2025-04-24,Completed
+PROG086,CAN043,Flutter Development,90,NULL,In Progress
+PROG087,CAN043,Dart Programming Language,100,2025-05-08,Completed
+PROG088,CAN044,Mobile App Security,65,NULL,In Progress
+PROG089,CAN044,App Store Optimization,100,2025-05-01,Completed
+PROG090,CAN045,Game Development with Unity,100,2025-05-10,Completed
+PROG091,CAN045,C# Programming,75,NULL,In Progress
+PROG092,CAN046,3D Modeling and Animation,80,NULL,In Progress
+PROG093,CAN046,Game Design Principles,100,2025-05-12,Completed
+PROG094,CAN047,Virtual Reality Development,85,NULL,In Progress
+PROG095,CAN047,Augmented Reality Basics,100,2025-04-26,Completed
+PROG096,CAN048,Blockchain Development,70,NULL,In Progress
+PROG097,CAN048,Smart Contract Programming,100,2025-05-15,Completed
+PROG098,CAN049,Cryptocurrency Fundamentals,90,NULL,In Progress
+PROG099,CAN049,DeFi Applications,100,2025-05-03,Completed
+PROG100,CAN050,Web3 Development,55,NULL,In Progress

@@ -1,0 +1,51 @@
+PlacementID,CandidateID,PlacementStatus,CompanyName,Position,StartDate,Notes
+PLAC001,CAN001,Placed,TechCorp Solutions,Junior AI Developer,2025-07-01,Excellent performance during training. Strong technical skills in ML.
+PLAC002,CAN002,Placed,DataVision Analytics,Data Scientist,2025-07-15,Outstanding project work and leadership qualities demonstrated.
+PLAC003,CAN003,Placed,InnovateAI,Machine Learning Engineer,2025-06-30,Specialized in computer vision applications.
+PLAC004,CAN004,Not Placed,NULL,NULL,NULL,Needs improvement in communication skills. Recommended for additional soft skills training.
+PLAC005,CAN005,Placed,CloudFirst Technologies,Python Developer,2025-07-08,Good technical foundation with room for growth.
+PLAC006,CAN006,Placed,WebCrafters,Frontend Developer,2025-07-22,Exceptional UI/UX design skills and React expertise.
+PLAC007,CAN007,Placed,ServerLogic,Backend Developer,2025-08-01,Strong database design and API development skills.
+PLAC008,CAN008,Placed,DesignHub,UI/UX Designer,2025-07-12,Creative approach to design problems and user-centered thinking.
+PLAC009,CAN009,Not Placed,NULL,NULL,NULL,Technical skills adequate but needs more experience with modern frameworks.
+PLAC010,CAN010,Placed,SecureNet,Cybersecurity Analyst,2025-08-05,Strong security fundamentals and analytical thinking.
+PLAC011,CAN011,Placed,DefendIT,Security Specialist,2025-07-18,Excellent penetration testing skills and security awareness.
+PLAC012,CAN012,Placed,CyberGuard,Digital Forensics Analyst,2025-08-10,Detailed oriented with strong investigative skills.
+PLAC013,CAN013,Not Placed,NULL,NULL,NULL,Good theoretical knowledge but needs more hands-on experience.
+PLAC014,CAN014,Placed,InfoSec Pro,Information Security Manager,2025-07-25,Leadership potential and comprehensive security knowledge.
+PLAC015,CAN015,Placed,EthicalHack Co,Ethical Hacker,2025-08-15,Creative problem-solving approach to security challenges.
+PLAC016,CAN016,Placed,ContainerOps,DevOps Engineer,2025-08-20,Excellent containerization and orchestration skills.
+PLAC017,CAN017,Placed,InfraTech,Infrastructure Engineer,2025-07-28,Strong automation skills and infrastructure knowledge.
+PLAC018,CAN018,Placed,PipelineWorks,CI/CD Specialist,2025-08-03,Outstanding pipeline development and automation expertise.
+PLAC019,CAN019,Not Placed,NULL,NULL,NULL,Good technical skills but needs improvement in team collaboration.
+PLAC020,CAN020,Placed,ReliabilityFirst,Site Reliability Engineer,2025-08-12,Strong monitoring and incident response capabilities.
+PLAC021,CAN021,Placed,AutomationPro,Configuration Manager,2025-08-25,Excellent Ansible and configuration management skills.
+PLAC022,CAN022,Placed,CloudMigrate,Cloud Solutions Architect,2025-08-18,Comprehensive cloud knowledge and migration expertise.
+PLAC023,CAN023,Placed,AzureTech,Cloud Developer,2025-08-08,Strong Azure platform knowledge and development skills.
+PLAC024,CAN024,Not Placed,NULL,NULL,NULL,Needs more hands-on experience with cloud platforms.
+PLAC025,CAN025,Placed,ServerlessNow,Cloud Engineer,2025-08-22,Innovative approach to serverless architecture design.
+PLAC026,CAN026,Placed,SecureDevOps,DevSecOps Engineer,2025-08-30,Excellent integration of security in development processes.
+PLAC027,CAN027,Placed,APIGateway Co,API Developer,2025-08-14,Strong API design and service mesh implementation skills.
+PLAC028,CAN028,Placed,LoadTest Pro,Performance Engineer,2025-08-28,Comprehensive performance testing and optimization expertise.
+PLAC029,CAN029,Not Placed,NULL,NULL,NULL,Good project management skills but needs technical depth.
+PLAC030,CAN030,Placed,AnalyticsCorp,Business Analyst,2025-09-02,Strong analytical thinking and requirements gathering skills.
+PLAC031,CAN031,Placed,DataInsight,Data Analyst,2025-08-16,Excellent Python and statistical analysis capabilities.
+PLAC032,CAN032,Placed,VisualizePro,BI Developer,2025-09-05,Outstanding data visualization and business intelligence skills.
+PLAC033,CAN033,Placed,BigDataCorp,SQL Developer,2025-08-26,Strong database skills and big data analytics knowledge.
+PLAC034,CAN034,Not Placed,NULL,NULL,NULL,Good statistical knowledge but needs more programming experience.
+PLAC035,CAN035,Placed,ExcelMasters,Data Analyst,2025-09-08,Excellent Excel skills and Power BI development capability.
+PLAC036,CAN036,Placed,QualityFirst,QA Engineer,2025-09-12,Comprehensive testing knowledge and attention to detail.
+PLAC037,CAN037,Placed,TestAutomation,Test Engineer,2025-08-24,Strong automation skills and mobile testing expertise.
+PLAC038,CAN038,Placed,BugHunters,QA Analyst,2025-09-15,Excellent bug tracking and test case design abilities.
+PLAC039,CAN039,Not Placed,NULL,NULL,NULL,Good testing fundamentals but needs more automation experience.
+PLAC040,CAN040,Placed,MobileFirst,Android Developer,2025-09-18,Strong Kotlin programming and mobile development skills.
+PLAC041,CAN041,Placed,iOSCrafters,iOS Developer,2025-09-01,Excellent Swift programming and mobile UI design abilities.
+PLAC042,CAN042,Placed,CrossPlatform,Mobile Developer,2025-09-22,Outstanding React Native and cross-platform development skills.
+PLAC043,CAN043,Placed,FlutterWorks,Mobile App Developer,2025-09-10,Innovative Flutter development and Dart programming expertise.
+PLAC044,CAN044,Not Placed,NULL,NULL,NULL,Good mobile development basics but needs more hands-on experience.
+PLAC045,CAN045,Placed,GameStudio Pro,Game Developer,2025-09-25,Creative game design and excellent Unity development skills.
+PLAC046,CAN046,Placed,3D Innovations,3D Artist,2025-09-06,Outstanding 3D modeling and animation capabilities.
+PLAC047,CAN047,Placed,VR Solutions,VR Developer,2025-09-28,Cutting-edge VR development and AR implementation skills.
+PLAC048,CAN048,Not Placed,NULL,NULL,NULL,Interesting blockchain knowledge but needs more practical development experience.
+PLAC049,CAN049,Placed,CryptoTech,Blockchain Developer,2025-09-20,Strong understanding of DeFi applications and cryptocurrency.
+PLAC050,CAN050,Placed,Web3 Builders,Web3 Developer,2025-10-02,Good foundational web3 knowledge with growth potential.

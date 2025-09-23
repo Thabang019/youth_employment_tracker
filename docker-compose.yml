@@ -1,0 +1,71 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: youth_employment_db
+    environment:
+      POSTGRES_DB: youth_employment
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./sql/schema:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  # Separate database for Airflow metadata
+  airflow_db:
+    image: postgres:15-alpine
+    container_name: airflow_metadata_db
+    environment:
+      POSTGRES_DB: airflow
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+    ports:
+      - "5433:5432"
+    volumes:
+      - airflow_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U airflow"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  airflow:
+    image: apache/airflow:2.8.0
+    container_name: youth_employment_airflow
+    restart: always
+    entrypoint: ["/bin/bash"]
+    command: ["/setup_airflow.sh"]
+    user: "50000:0"  # Use airflow user with root group for directory creation
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow_db:5432/airflow
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__WEBSERVER__EXPOSE_CONFIG: "True"
+      AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "True"
+      AIRFLOW__LOGGING__LOGGING_LEVEL: INFO
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/plugins:/opt/airflow/plugins
+      - ./src:/opt/airflow/src
+      - ./data/raw:/opt/airflow/data/raw
+      - ./data/outputs:/opt/airflow/data/outputs  # Add outputs directory mapping
+      - ./airflow/setup_airflow.sh:/setup_airflow.sh
+    depends_on:
+      airflow_db:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+
+volumes:
+  postgres_data:
+  airflow_postgres_data:
