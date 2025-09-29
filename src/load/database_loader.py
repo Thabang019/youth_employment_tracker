@@ -63,20 +63,18 @@ class DatabaseLoader:
             })
             
             with self.engine.begin() as conn:
-                conn.execute(text("DELETE FROM dim_candidates"))
+                conn.execute(text("TRUNCATE TABLE dim_candidates RESTART IDENTITY CASCADE"))
 
             candidates_df.to_sql('dim_candidates', self.engine, if_exists='append', index=False)
             logger.info(f"Loaded {len(candidates_df)} records to dim_candidates")
 
-        
-        # Similar methods for other dimensions...
     
     def _load_facts(self, data):
         """Load fact tables"""
         if 'placement_analysis' in data:
             placements_df = data['placement_analysis'][[
                 'PlacementID', 'CandidateID', 'CompanyName', 'PlacementStatus', 
-                'StartDate', 'EndDate', 'Salary'
+                'StartDate'
             ]].rename(columns={
                 'PlacementID': 'placement_id',
                 'CandidateID': 'candidate_id',
@@ -85,15 +83,18 @@ class DatabaseLoader:
                 'StartDate': 'start_date'
             })
             
-            placements_df.to_sql('fact_placements', self.engine, if_exists='replace', index=False)
+            with self.engine.begin() as conn:
+                conn.execute(text("TRUNCATE TABLE fact_placements RESTART IDENTITY CASCADE"))
+            
+            placements_df.to_sql('fact_placements', self.engine, if_exists='append', index=False)
             logger.info(f"Loaded {len(placements_df)} records to fact_placements")
         
-        # Similar methods for other facts...
     
     def _refresh_views(self):
         """Refresh materialized views"""
         with self.engine.connect() as conn:
-            conn.execute(text("SELECT refresh_materialized_views()"))
+            conn.execute(text("REFRESH MATERIALIZED VIEW mv_placement_rates"))
+            conn.execute(text("REFRESH MATERIALIZED VIEW mv_cohort_performance"))
             conn.commit()
             logger.info("Materialized views refreshed")
     

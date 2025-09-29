@@ -50,8 +50,6 @@ CREATE TABLE fact_placements (
     company_name VARCHAR(100),
     placement_status VARCHAR(50),
     start_date DATE,
-    end_date DATE,
-    salary DECIMAL(10,2),
     created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
