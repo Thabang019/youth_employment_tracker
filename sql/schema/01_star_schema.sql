@@ -49,6 +49,9 @@ CREATE TABLE fact_placements (
     candidate_id VARCHAR(50) REFERENCES dim_candidates(candidate_id),
     company_name VARCHAR(100),
     placement_status VARCHAR(50),
+    gender VARCHAR(20),
+    province_id VARCHAR(50),
+    cohort_id VARCHAR(50),
     start_date DATE,
     created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
@@ -57,8 +60,11 @@ CREATE TABLE fact_coursera (
     progress_id VARCHAR(50) PRIMARY KEY,
     candidate_id VARCHAR(50) REFERENCES dim_candidates(candidate_id),
     course_name VARCHAR(150),
+    completion_status VARCHAR(50),
+    gender VARCHAR(20),
+    age INTEGER,
     date_completed DATE,
-    grade_achieved DECIMAL(5,2),
+    cohort_id VARCHAR(50),
     created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -66,7 +72,6 @@ CREATE TABLE fact_scrums (
     scrum_id VARCHAR(50) PRIMARY KEY,
     team_id VARCHAR(50) REFERENCES dim_teams(team_id),
     session_date DATE,
-    attendance_count INTEGER,
     created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -74,7 +79,6 @@ CREATE TABLE fact_projects (
     project_id VARCHAR(50) PRIMARY KEY,
     team_id VARCHAR(50) REFERENCES dim_teams(team_id),
     project_name VARCHAR(100),
-    start_date DATE,
-    end_date DATE,
+    evaluation_score VARCHAR(100),
     created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

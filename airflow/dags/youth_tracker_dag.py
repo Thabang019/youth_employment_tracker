@@ -47,7 +47,7 @@ def generate_reports():
     loader = DatabaseLoader()
     loader.connect()
     placement_report = loader.execute_query("""
-        SELECT cohort_name, region, placement_rate, average_salary
+        SELECT cohort_name, region, placement_rate
         FROM mv_placement_rates
         ORDER BY placement_rate DESC
     """)
